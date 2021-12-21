@@ -31,6 +31,7 @@ class SignUpForm(forms.ModelForm):
     def clean_password1(self):
         password = self.cleaned_data.get("password")
         password1 = self.cleaned_data.get("password1")
+
         if password != password1:
             raise forms.ValidationError("Password confirmation does not match")
         else:
