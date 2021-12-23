@@ -132,6 +132,8 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
 AUTH_USER_MODEL = "users.User"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
@@ -145,6 +147,8 @@ EMAIL_HOST = "smtp.mailgun.org"
 EMAIL_PORT = "587"
 EMAIL_HOST_USER = os.environ.get("MAILGUN_USERNAME")
 EMAIL_HOST_PASSWORD = os.environ.get("MAILGUN_PASSWORD")
+# EMAIL_HOST_USER = "postmaster@sandbox1f42ceba0a234eb28c0ca9539fd2243c.mailgun.org"
+# EMAIL_HOST_PASSWORD = "af4ba0ecb47aad309ec8c87ac965f80b-1831c31e-0504fd33"
+# print(EMAIL_HOST_USER)
+# print(EMAIL_HOST_PASSWORD)
 EMAIL_FROM = "ong@sandboxbc87653ab16248248d2d919f00190063.mailgun.org"
-# EMAIL_HOST_USER = "postmaster@sandboxbc87653ab16248248d2d919f00190063.mailgun.org"
-# EMAIL_HOST_PASSWORD = "d03aa1afd33749e4c717695dcad5543c-1831c31e-f309bd9e"
