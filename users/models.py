@@ -39,20 +39,20 @@ class User(AbstractUser):
         (LOGIN_GITHUB, "Github"),
         (LOGIN_KAKAO, "Kakao"),
     )
+    # first_name = models.CharField(
+    #     ("first name"), max_length=30, blank=True, default="Unnamed User"
+    # )
 
     avatar = models.ImageField(
         blank=True,
         upload_to="avatars",
     )
-    gender = models.CharField(
-        choices=GENDER_CHOICES, max_length=10, null=True, blank=True
-    )
-    bio = models.TextField(default="", blank=True)
+    gender = models.CharField(choices=GENDER_CHOICES, max_length=10, blank=True)
+    bio = models.TextField(blank=True)
     birthdate = models.DateField(blank=True, null=True)
     language = models.CharField(
         choices=LANGUAGE_CHOICES,
         max_length=2,
-        null=True,
         blank=True,
         default=LANGUAGE_KOREAN,
     )
