@@ -54,7 +54,7 @@ class RoomAdmin(admin.ModelAdmin):
         (
             "More About the space",
             {
-                "classes": ("collapse",),
+                # "classes": ("collapse",),
                 "fields": ("amenities", "facilities", "house_rules"),
             },
         ),
@@ -107,6 +107,8 @@ class RoomAdmin(admin.ModelAdmin):
 
     def count_amenities(self, obj):
         return obj.amenities.count()
+
+    count_amenities.short_description = "Amenity Count"
 
     def count_photos(self, obj):
         return obj.photos.count()
