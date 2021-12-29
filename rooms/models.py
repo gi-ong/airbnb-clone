@@ -1,8 +1,11 @@
+from django.utils import timezone
 from django.db import models
 from django.urls import reverse
 from django_countries.fields import CountryField
 from core import models as core_models
 from cal import Calendar
+from dateutil import relativedelta
+import datetime
 
 
 class AbstractItem(core_models.TimeStampedModel):
@@ -121,6 +124,19 @@ class Room(core_models.TimeStampedModel):
         return photos
 
     def get_calendars(self):
-        this_month = Calendar(2021, 12)
-        next_month = Calendar(2022, 1)
+        today = datetime.date.today()
+        nextmonth = today + relativedelta.relativedelta(months=1)
+        this_month = Calendar(today.year, today.month)
+        next_month = Calendar(nextmonth.year, nextmonth.month)
         return [this_month, next_month]
+
+        # now = timezone.now()
+        # this_year = now.year
+        # this_month = now.month
+        # next_month = this_month + 1
+        # this_month_cal = Calendar(this_year, this_month)
+        # if this_month == 12:
+        #     next_month = 1
+        #     this_year = this_year + 1
+        # next_month_cal = Calendar(this_year, next_month)
+        # return [this_month_cal, next_month_cal]
