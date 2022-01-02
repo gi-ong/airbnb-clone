@@ -152,3 +152,11 @@ EMAIL_HOST_PASSWORD = os.environ.get("MAILGUN_PASSWORD")
 # print(EMAIL_HOST_USER)
 # print(EMAIL_HOST_PASSWORD)
 EMAIL_FROM = "ong@sandboxbc87653ab16248248d2d919f00190063.mailgun.org"
+
+# Auth
+
+LOGIN_URL = "/users/login/"
+
+# Locale
+
+LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
