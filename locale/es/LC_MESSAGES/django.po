@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-01-03 00:42+0900\n"
+"POT-Creation-Date: 2022-01-03 15:32+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,10 +22,79 @@ msgstr ""
 msgid "Search By City"
 msgstr "Buscar por Ciudad"
 
-#: templates/partials/footer.html:4
+#: templates/partials/footer.html:5
 msgid "Please don't copy us."
 msgstr "Por favor no nos copies."
 
-#: templates/partials/footer.html:7
+#: templates/partials/footer.html:8
 msgid "All rights reserved"
 msgstr "Todos los derechos reservados"
+
+#: templates/rooms/room_list.html:24
+#, python-format
+msgid "Page %(current_page)s of %(total_pages)s"
+msgstr "Pågina %(current_page)s de %(total_pages)s"
+
+#: users/mixins.py:13 users/mixins.py:22
+msgid "Can't go there"
+msgstr "No puedo ir allí."
+
+#: users/models.py:21
+msgid "Male"
+msgstr "Hombre"
+
+#: users/models.py:22
+msgid "Female"
+msgstr "Hembra"
+
+#: users/models.py:23
+msgid "Other"
+msgstr "Otros"
+
+#: users/models.py:29
+msgid "English"
+msgstr "Inglés"
+
+#: users/models.py:30
+msgid "Korean"
+msgstr "Coréano"
+
+#: users/models.py:52
+msgid "avatar"
+msgstr "avatar"
+
+#: users/models.py:57
+msgid "gender"
+msgstr "el género"
+
+#: users/models.py:59
+msgid "bio"
+msgstr "biografía"
+
+#: users/models.py:60
+msgid "birthdate"
+msgstr "fecha de nacimiento"
+
+#: users/models.py:62
+msgid "language"
+msgstr "el lenguaje"
+
+#: users/models.py:69
+msgid "currency"
+msgstr "moneda"
+
+#: users/models.py:76
+msgid "superhost"
+msgstr "superhost"
+
+#: users/models.py:77
+msgid "email_verified"
+msgstr "email_verificado"
+
+#: users/models.py:79
+msgid "email_secret"
+msgstr "email_secreto"
+
+#: users/models.py:96
+msgid "Verify Airbnb Account"
+msgstr "Verificar la cuenta de Airbnb"
