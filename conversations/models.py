@@ -27,6 +27,8 @@ class Conversation(core_models.TimeStampedModel):
 
 class Message(core_models.TimeStampedModel):
 
+    """Message Model Definition"""
+
     message = models.TextField()
     user = models.ForeignKey(
         "users.User", related_name="messages", on_delete=models.CASCADE
