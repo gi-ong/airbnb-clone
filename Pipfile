@@ -16,6 +16,7 @@ requests = "*"
 flake8 = "*"
 black = "*"
 pipenv-to-requirements = "*"
+awsebcli = "*"
 
 [requires]
 python_version = "3.9"

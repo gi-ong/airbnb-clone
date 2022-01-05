@@ -25,7 +25,7 @@ SECRET_KEY = "5x7#7s!zz_b3ub*1fx-fe=@zhvar!56&r(80r4_1j+^sz#197b"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = bool(os.environ.get("DEBUG"))
 
-ALLOWED_HOSTS = ""
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -103,7 +103,7 @@ else:
             "PASSWORD": os.environ.get("RDS_PASSWORD"),
             "PORT": "5432",
         }
-    }    
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
