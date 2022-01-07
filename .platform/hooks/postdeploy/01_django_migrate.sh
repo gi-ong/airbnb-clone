@@ -2,7 +2,6 @@
 
 source "$PYTHONPATH/activate" && {
 # log which migrations have already been applied
-python manage.py showmigrations;
+django-admin migrate
 # migrate
-python manage.py migrate --noinput;
 }
